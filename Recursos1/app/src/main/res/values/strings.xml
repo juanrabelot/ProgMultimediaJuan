@@ -2,5 +2,5 @@
     <string name="app_name">Recursos1</string>
     <string name="nombre1">Juan Rabelo Terrazas</string>
     <string name="btnSiguiente1">siguiente</string>
-    <string name="btnAnular1"></string>
+    <string name="btnAnular1">anular</string>
 </resources>
