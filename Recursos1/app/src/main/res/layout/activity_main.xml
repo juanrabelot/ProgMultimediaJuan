@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Juan Rabelo Terrazas"
+        android:text="@string/nombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="botón 1"
+        android:text="@string/btnSiguiente"
         tools:layout_editor_absoluteX="256dp"
         tools:layout_editor_absoluteY="418dp" />
 
@@ -28,7 +28,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="botón 2"
+        android:text="@string/btnAnular"
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="418dp" />
 
