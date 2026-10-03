@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nombre1"
@@ -18,24 +19,30 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/estiloBotones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnSiguiente1"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="418dp"
         app:backgroundTint="@color/green"
-        style="@style/estiloBotones"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
 
     <Button
         android:id="@+id/button2"
+        style="@style/estiloBotones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnAnular1"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="418dp"
         app:backgroundTint="@color/red"
-        style="@style/estiloBotones"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
