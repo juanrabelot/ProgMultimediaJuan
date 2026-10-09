@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <View
+            android:id="@+id/view10"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="top|start"
+            android:background="@color/cuadrados"
+            />
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@color/cuadrados"
+
+            />
+
+        <View
+            android:id="@+id/view12"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="end"
+            android:background="@color/cuadrados"
+            />
+
+        <View
+            android:id="@+id/view13"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical|start"
+            android:background="@color/cuadrados"
+            />
+
+        <View
+            android:id="@+id/view14"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@color/cuadrados"
+            />
+
+        <View
+            android:id="@+id/view15"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@color/cuadrados"
+            />
+
+        <View
+            android:id="@+id/view16"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|start"
+            android:background="@color/cuadrados"
+            />
+
+        <View
+            android:id="@+id/view17"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/cuadrados"
+            />
+
+        <View
+            android:id="@+id/view18"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|end"
+            android:background="@color/cuadrados"
+            />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
