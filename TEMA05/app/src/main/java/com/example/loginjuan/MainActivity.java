@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Button botonContinuar;
     TextView textViewMensajes;
     Switch switchRecordar;
+    private int intentos = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,42 @@ public class MainActivity extends AppCompatActivity {
             if (contrasena.isEmpty()) {
                 editTextContraseña.setError("Debe introducir una contraseña");
                 return;
+            }
+            if (correo.equals("juan@correo.com")
+                    && contrasena.equals("1234")) {
+
+                if (switchRecordar.isChecked()) {
+
+                    textViewMensajes.setText("Usuario y contraseña correctos.\nAlmacenados para siguientes accesos");
+
+                } else {
+
+                    textViewMensajes.setText("Usuario y contraseña correctos");
+
+                }
+
+                textViewMensajes.setTextColor(Color.GREEN);
+
+            } else {
+
+                intentos++;
+
+                textViewMensajes.setText("Usuario o contraseña incorrectos");
+                textViewMensajes.setTextColor(Color.RED);
+
+                if (intentos >= 3) {
+
+                    botonContinuar.setEnabled(false);
+
+                    textViewMensajes.setText("Demasiados intentos");
+                    textViewMensajes.setTextColor(Color.RED);
+
+                    Toast.makeText(
+                            MainActivity.this,
+                            "Botón bloqueado",
+                            Toast.LENGTH_SHORT
+                    ).show();
+                }
             }
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
