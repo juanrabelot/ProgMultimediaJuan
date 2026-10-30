@@ -34,25 +34,14 @@ public class MainActivity extends AppCompatActivity {
             String correo = editTextCorreo.getText().toString();
             String contrasena = editTextContraseña.getText().toString();
 
-            if (correo.equals("juan@correo.com")
-                    && contrasena.equals("1234")) {
+            if (correo.isEmpty()) {
+                editTextCorreo.setError("Debe introducir un correo");
+                return;
+            }
 
-                if (switchRecordar.isChecked()) {
-
-                    textViewMensajes.setText("Usuario y contraseña correctos.\nAlmacenados para siguientes accesos");
-
-                } else {
-
-                    textViewMensajes.setText("Usuario y contraseña correctos");
-
-                }
-
-                textViewMensajes.setTextColor(Color.GREEN);
-
-            } else {
-
-                textViewMensajes.setText("Usuario o contraseña incorrectos");
-                textViewMensajes.setTextColor(Color.RED);
+            if (contrasena.isEmpty()) {
+                editTextContraseña.setError("Debe introducir una contraseña");
+                return;
             }
         });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
