@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -58,6 +59,15 @@ public class AdaptadorCoches extends RecyclerView.Adapter<AdaptadorCoches.ViewHo
         holder.textViewModelo.setText(coche.getModelo());
         holder.textViewMarca.setText(coche.getMarca());
         holder.imageViewCoche.setImageResource(coche.getImagen());
+
+        holder.itemView.setOnClickListener(v ->
+                Toast.makeText(
+                        v.getContext(),
+                        coche.getModelo(),
+                        Toast.LENGTH_SHORT
+                ).show()
+        );
+
     }
 
     @Override

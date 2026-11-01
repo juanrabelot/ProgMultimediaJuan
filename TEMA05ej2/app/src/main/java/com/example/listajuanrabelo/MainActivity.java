@@ -1,7 +1,7 @@
 package com.example.listajuanrabelo;
-
+import androidx.recyclerview.widget.DividerItemDecoration;
 import android.os.Bundle;
-
+import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -69,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerViewCoches.setLayoutManager(
                 new LinearLayoutManager(this));
+        DividerItemDecoration separador =
+                new DividerItemDecoration(
+                        this,
+                        DividerItemDecoration.VERTICAL);
+
+        recyclerViewCoches.addItemDecoration(separador);
 
         AdaptadorCoches adaptador =
                 new AdaptadorCoches(listaCoches);
