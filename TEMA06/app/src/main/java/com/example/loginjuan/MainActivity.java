@@ -14,6 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.content.Intent;
+import android.content.SharedPreferences;
 
 public class MainActivity extends AppCompatActivity {
     EditText editTextCorreo, editTextContraseña;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     TextView textViewMensajes;
     Switch switchRecordar;
     private int intentos = 0;
+    private static final String PREFS = "sesion";
+    private static final String CLAVE_CORREO = "correo";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,20 @@ public class MainActivity extends AppCompatActivity {
         botonContinuar = findViewById(R.id.botonContinuar);
         textViewMensajes = findViewById(R.id.textViewMensajes);
         switchRecordar = findViewById(R.id.switchRecordar);
+        SharedPreferences preferencias =
+                getSharedPreferences(PREFS, MODE_PRIVATE);
+
+        String correoGuardado =
+                preferencias.getString(CLAVE_CORREO, "");
+        if (!correoGuardado.isEmpty()) {
+
+            editTextCorreo.setText(correoGuardado);
+
+            switchRecordar.setChecked(true);
+
+            editTextContraseña.requestFocus();
+
+        }
         botonContinuar.setOnClickListener(v -> {
 
             String correo = editTextCorreo.getText().toString();
@@ -48,6 +65,24 @@ public class MainActivity extends AppCompatActivity {
             }
             if (correo.equals("juan@correo.com")
                     && contrasena.equals("1234")) {
+
+                SharedPreferences.Editor editor =
+                        preferencias.edit();
+                if (switchRecordar.isChecked()) {
+
+
+
+
+
+                    editor.putString(CLAVE_CORREO, correo);
+
+                } else {
+
+                    editor.remove(CLAVE_CORREO);
+
+                }
+
+                editor.apply();
 
                 Intent intent = new Intent(
                         MainActivity.this,
