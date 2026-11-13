@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ReproductorJuanRabelo</string>
+<string name="titulo_cancion">Empire State of Mind · JAY-Z, Alicia Keys</string>
+<string name="efecto_1">Notificación Iphone</string>
+<string name="efecto_2">Notificación Samsung</string>
+<string name="efecto_3">Tono de llamada Skype</string>
+<string name="efecto_4">Tono de llamada de Nokia</string>
+<string name="etiqueta_efectos">Efectos de sonido</string>
+</resources>
