@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="soundcloud_orange">#FF5500</color>
+    <color name="fondo_negro">#000000</color>
+    <color name="gris_oscuro">#121212</color>
 </resources>
